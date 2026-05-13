@@ -114,13 +114,13 @@ const PRODUCTS = [
 ];
 
 const APPLICATIONS = [
-  { id: "hypoxia", label: "Hypoxia Studies", icon: "📉", desc: "Low-oxygen environments for ischemia, stem cell work, and tumour biology", needs: ["o2"] },
-  { id: "hyperoxia", label: "Hyperoxia", icon: "📈", desc: "Elevated oxygen exposure for oxidative stress and reoxygenation studies", needs: ["o2"] },
-  { id: "co2-control", label: "CO₂ Control", icon: "🧪", desc: "pH and metabolic control for general cell culture", needs: ["co2"] },
-  { id: "dual-gas", label: "Dual Gas (O₂ + CO₂)", icon: "⚗️", desc: "Simultaneous O₂ and CO₂ control for physiologic simulation", needs: ["o2","co2"] },
-  { id: "cycling", label: "Dynamic Cycling", icon: "🔄", desc: "Intermittent hypoxia, ischemia/reperfusion, multi-setpoint protocols", needs: ["o2","co2","cycling"] },
-  { id: "microscopy", label: "Live Cell Microscopy", icon: "🔬", desc: "Gas control for microscope stage incubators and media conditioning", needs: ["microscopy"] },
-  { id: "bioactive", label: "CO / NO Studies", icon: "🧬", desc: "Gasotransmitter and pathophysiology research with CO and NO exposure", needs: ["co-no"] },
+  { id: "hypoxia", label: "Hypoxia Studies", desc: "Low-oxygen environments for ischemia, stem cell work, and tumour biology", needs: ["o2"] },
+  { id: "hyperoxia", label: "Hyperoxia", desc: "Elevated oxygen exposure for oxidative stress and reoxygenation studies", needs: ["o2"] },
+  { id: "co2-control", label: "CO₂ Control", desc: "pH and metabolic control for general cell culture", needs: ["co2"] },
+  { id: "dual-gas", label: "Dual Gas (O₂ + CO₂)", desc: "Simultaneous O₂ and CO₂ control for physiologic simulation", needs: ["o2","co2"] },
+  { id: "cycling", label: "Dynamic Cycling", desc: "Intermittent hypoxia, ischemia/reperfusion, multi-setpoint protocols", needs: ["o2","co2","cycling"] },
+  { id: "microscopy", label: "Live Cell Microscopy", desc: "Gas control for microscope stage incubators and media conditioning", needs: ["microscopy"] },
+  { id: "bioactive", label: "CO / NO Studies", desc: "Gasotransmitter and pathophysiology research with CO and NO exposure", needs: ["co-no"] },
 ];
 
 const OPTIONAL_COMPONENTS = [
@@ -454,15 +454,14 @@ function HomeScreen({go}) {
       <div style={{maxWidth:1080,margin:"0 auto",padding:"56px 28px"}}>
         <div style={{display:"grid",gridTemplateColumns:"repeat(3,1fr)",gap:22,marginBottom:52}}>
           {[
-            {icon:"📋",title:"Product Library",desc:"Browse all 8 BioSpherix in vitro instruments with full specifications, applications, and compatibility information.",action:"Browse Products",target:"library",accent:false},
-            {icon:"⚙️",title:"System Builder",desc:"Select an application, choose a chamber and controller, add optional components, and generate a clean system preview.",action:"Build a System",target:"builder",accent:true},
-            {icon:"⚖️",title:"Compare Controllers",desc:"Place up to 4 controllers side-by-side to compare gas control range, infusion rate, footprint, and application fit.",action:"Start Comparing",target:"compare",accent:false},
+            {title:"Product Library",desc:"Browse all 8 BioSpherix in vitro instruments with full specifications, applications, and compatibility information.",action:"Browse Products",target:"library",accent:false},
+            {title:"System Builder",desc:"Select an application, choose a chamber and controller, add optional components, and generate a clean system preview.",action:"Build a System",target:"builder",accent:true},
+            {title:"Compare Controllers",desc:"Place up to 4 controllers side-by-side to compare gas control range, infusion rate, footprint, and application fit.",action:"Start Comparing",target:"compare",accent:false},
           ].map(f=>(
             <Card key={f.title} hover style={{overflow:"hidden"}}>
               {f.accent&&<div style={{height:4,background:C.orange}}/>}
               <div style={{padding:"26px 24px"}}>
-                <div style={{fontSize:30,marginBottom:14}}>{f.icon}</div>
-                <h3 style={{fontSize:16,fontWeight:700,marginBottom:8,letterSpacing:"-0.02em"}}>{f.title}</h3>
+                                <h3 style={{fontSize:16,fontWeight:700,marginBottom:8,letterSpacing:"-0.02em"}}>{f.title}</h3>
                 <p style={{fontSize:13,color:C.t2,lineHeight:1.6,marginBottom:18}}>{f.desc}</p>
                 <button onClick={()=>go(f.target)} style={{background:f.accent?C.navy:"transparent",color:f.accent?"white":C.navy,border:f.accent?"none":`1.5px solid ${C.border}`,borderRadius:7,padding:"8px 16px",fontSize:12,fontWeight:600,cursor:"pointer",fontFamily:"inherit"}}>
                   {f.action} →
@@ -524,7 +523,6 @@ function LibraryScreen({go,searchQ,setSearchQ,filterTag,setFilterTag,compareList
       </div>
       {filtered.length===0&&(
         <div style={{textAlign:"center",padding:"80px 32px",color:C.t3}}>
-          <div style={{fontSize:36,marginBottom:12}}>🔍</div>
           <p style={{fontSize:15,fontWeight:500}}>No products match "{searchQ}"</p>
           <button onClick={()=>{setSearchQ("");setFilterTag("all");}} style={{background:"none",border:"none",color:C.orange,cursor:"pointer",fontSize:13,fontWeight:600,marginTop:8,fontFamily:"inherit"}}>Clear filters</button>
         </div>
@@ -732,8 +730,7 @@ function BuilderScreen({go,cfg,setCfg,setGenSystem}) {
           <div style={{display:"grid",gridTemplateColumns:"repeat(2,1fr)",gap:12,marginBottom:24}}>
             {APPLICATIONS.map(a=>(
               <div key={a.id} onClick={()=>set("application",a.id)} style={{background:cfg.application===a.id?"#EAF2FF":"white",border:`1.5px solid ${cfg.application===a.id?C.navy:C.border}`,borderRadius:10,padding:"14px 16px",cursor:"pointer",transition:"all 0.15s"}}>
-                <div style={{fontSize:22,marginBottom:6}}>{a.icon}</div>
-                <div style={{fontSize:14,fontWeight:700,color:C.navy,marginBottom:4}}>{a.label}</div>
+                                <div style={{fontSize:14,fontWeight:700,color:C.navy,marginBottom:4}}>{a.label}</div>
                 <div style={{fontSize:12,color:C.t2,lineHeight:1.5}}>{a.desc}</div>
               </div>
             ))}
@@ -772,7 +769,7 @@ function BuilderScreen({go,cfg,setCfg,setGenSystem}) {
         <div>
           <h2 style={{fontSize:20,fontWeight:700,marginBottom:4,letterSpacing:"-0.02em"}}>Choose your controller</h2>
           <p style={{fontSize:13,color:C.t2,marginBottom:22}}>{cfg.application?`Recommended for: ${APPLICATIONS.find(a=>a.id===cfg.application)?.label}`:"Select a controller for your system."}</p>
-          {suggested.length<allCtrl.length&&<div style={{background:"#FFF3EC",border:"1px solid #F5C9A0",borderRadius:8,padding:"8px 14px",fontSize:12,color:"#8A4010",marginBottom:16}}>⭐ Showing {suggested.length} recommended controllers for your application</div>}
+          {suggested.length<allCtrl.length&&<div style={{background:"#EAF2FF",border:`1px solid ${C.border}`,borderRadius:8,padding:"8px 14px",fontSize:12,color:C.navy,marginBottom:16,fontWeight:500}}>Showing {suggested.length} recommended controllers for your application</div>}
           <div style={{display:"flex",flexDirection:"column",gap:10,marginBottom:20}}>
             {(suggested.length>0?suggested:allCtrl).map(p=>(
               <div key={p.id} onClick={()=>set("controller",p.id)} style={{background:cfg.controller===p.id?"#EAF2FF":"white",border:`1.5px solid ${cfg.controller===p.id?C.navy:C.border}`,borderRadius:11,padding:"14px 16px",cursor:"pointer",transition:"all 0.15s",display:"flex",alignItems:"center",gap:16}}>
@@ -855,7 +852,6 @@ function PreviewScreen({go,system}) {
         <div style={{position:"relative"}}>
           <div style={{display:"flex",alignItems:"center",gap:10,marginBottom:16}}>
             <span style={{background:"rgba(232,119,46,0.2)",border:"1px solid rgba(232,119,46,0.4)",borderRadius:4,padding:"3px 10px",fontSize:11,color:"#E8C4A0",fontWeight:600,letterSpacing:"0.06em"}}>SYSTEM CONFIGURATION</span>
-            {app&&<span style={{fontSize:16}}>{app.icon}</span>}
           </div>
           <h1 style={{fontSize:28,fontWeight:700,color:"white",letterSpacing:"-0.03em",marginBottom:8}}>{sysName}</h1>
           <p style={{fontSize:14,color:"#A0BCDA",lineHeight:1.65,maxWidth:580}}>{explanation}</p>
@@ -959,7 +955,6 @@ function CompareScreen({compareList,toggleCmp,go}) {
       <p style={{color:C.t2,fontSize:14,marginBottom:28}}>Select up to 4 products from the Product Library to compare side-by-side.</p>
       {products.length===0?(
         <div style={{textAlign:"center",padding:"80px 32px",background:"white",borderRadius:16,border:`1px solid ${C.border}`}}>
-          <div style={{fontSize:40,marginBottom:14}}>⚖️</div>
           <h3 style={{fontSize:18,fontWeight:700,marginBottom:8}}>No products selected</h3>
           <p style={{color:C.t2,fontSize:14,marginBottom:22}}>Go to the Product Library and click "+" on product cards to add them here.</p>
           <button onClick={()=>go("library")} style={{background:C.navy,color:"white",border:"none",borderRadius:8,padding:"10px 22px",fontSize:13,fontWeight:600,cursor:"pointer",fontFamily:"inherit"}}>Browse Product Library</button>

@@ -334,7 +334,7 @@ The pricing panel is a working estimate system, not a final BioSpherix quoting s
 
 The marketing minute presents **Design Your Lab** as a fast, professional planning tool for early BioSpherix client conversations.
 
-**Marketing Minute Video:** [Watch the Marketing Minute](https://drive.google.com/file/d/10LA0gDWDKdHG1jaGi3pu326aB_7-0iWR/view?usp=sharing)
+**Marketing Minute Video:** [Watch the Marketing Minute](https://drive.google.com/file/d/1_VJOaCTdvpiSjYUC1jwSBcxHQT1-soWy/view?usp=sharing)
 
 ### Marketing Minute Concept
 

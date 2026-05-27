@@ -334,32 +334,23 @@ The pricing panel is a working estimate system, not a final BioSpherix quoting s
 
 The marketing minute presents **Design Your Lab** as a fast, professional planning tool for early BioSpherix client conversations.
 
-**Marketing Minute Video:** [ADD FINAL VIDEO LINK HERE BEFORE SUBMISSION]
+**Marketing Minute Video:** [Watch the Marketing Minute](https://drive.google.com/file/d/10LA0gDWDKdHG1jaGi3pu326aB_7-0iWR/view?usp=sharing)
 
 ### Marketing Minute Concept
 
-The video communicates the project in one clear arc:
+The video explains how Nihar can use **Design Your Lab** before moving into CAD, Blender, or fabrication planning. It shows the problem of translating client requirements into a clear system layout, then presents the app as the missing step between conversation and detailed engineering.
 
-1. **The problem:** Nihar loses time translating client requirements into visual system plans before the build.
-2. **The tool:** Design Your Lab lets him place BioSpherix components onto a scaled floor plan, adjust system details, and create a client-ready proposal.
-3. **The value:** The client can understand footprint, components, gases, pricing estimates, and design intent earlier.
-4. **The outcome:** Nihar can align with the client before spending time in CAD, Blender, or detailed engineering.
+The video focuses on:
 
-### Suggested Voiceover
+- Selecting BioSpherix components
+- Arranging a scaled system layout
+- Reviewing footprint, gases, pricing, and design intent
+- Creating a client-ready proposal
+- Helping Nihar align with a client before detailed CAD or rendering work begins
 
-> Before a BioSpherix system becomes a CAD model, render, or build, it starts as a conversation. Design Your Lab helps Nihar turn that conversation into a clear system layout. He can select chambers and controllers, arrange them on a scaled floor plan, review gases and footprint, adjust pricing estimates, and generate a client-ready proposal. It is not a replacement for engineering software. It is the missing step before engineering begins.
+### Why This Supports the Project
 
-### Evidence to Include in the Video
-
-The marketing minute should include:
-
-- A quick view of the live app
-- Component selection from the library
-- Components placed on the floor plan
-- Live readout, gases, and pricing changing
-- The generated design intent paragraph
-- The printable proposal view
-- A final title card with the live project name
+The video connects back to the design argument: Nihar needed a faster way to make early system conversations visible, understandable, and client-ready. The marketing minute communicates that value by showing the tool in use and explaining why it matters in his workflow.
 
 ---
 

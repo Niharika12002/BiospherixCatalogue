@@ -77,3 +77,110 @@ The following are constraints driven by what Nihar needs, not by what looks good
 - **Client-ready by default.** No "client mode" toggle, no presenter view. Every screen state has to be polished enough that Nihar can turn the laptop toward a client mid-conversation without feeling exposed.
 - **The tool has to belong to Nihar.** Editable library, persistent across sessions. If his customizations don't survive a reload, the tool is a fixed BioSpherix presentation, not Nihar's working library.
 - **Brand integrity.** BioSpherix is a real company with a real visual identity. The logo, color palette, and naming conventions are not approximations — they're the official 2024 brand assets. Anything less reads as a class project, not a tool.
+
+---
+
+## Research Documentation
+
+This project was built through direct research with Nihar, a mechanical engineer at BioSpherix. The research included multiple conversations, interview recordings, workflow questions, and feedback sessions where he reviewed the tool as it developed. The goal was not to design a general BioSpherix catalog, but to understand what Nihar specifically needs in his day-to-day work when translating client requirements into system layouts.
+
+### Research Method
+
+I used a combination of:
+
+- Initial interview questions about Nihar’s workflow, tools, repeated tasks, and pain points
+- Follow-up conversations to clarify what kind of tool would actually save him time
+- Prototype feedback sessions while the app was being built
+- Notes from Nihar’s requested changes after seeing the working interface
+- Research photos and documentation of the feedback process
+
+The most important shift in the project came from the interviews. Early on, the project could have become a simple product catalog. But Nihar’s answers made it clear that BioSpherix already has product information available. The missing piece was not another catalog. The missing piece was a faster way to turn a client conversation into a spatial system plan.
+
+---
+
+## Interview Insights
+
+### Insight 1: Nihar’s work begins with translation
+
+Nihar’s job is not just to design equipment. A major part of his work is translating what a client describes into a system configuration that can actually be built. Clients often explain their research workflow, experiment, or lab setup, and Nihar has to turn that into chambers, controllers, gases, dimensions, and a physical arrangement.
+
+This matters because the client is not usually thinking like a mechanical engineer. They may understand the science, but not the physical layout or engineering requirements of the system. The tool therefore needed to help Nihar explain a design, not just assemble one.
+
+> “Maybe they could translate what the design intent is to the customer properly. Some design concepts are difficult to show visually. Maybe a brief paragraph that goes along with the design.”
+
+This quote became the reason the app includes proposal-style language and system summaries, not only visual layout blocks.
+
+---
+
+### Insight 2: The slowest part is aligning before the real build
+
+Nihar already has professional tools like Fusion 360, SolidWorks, and Blender. The problem is that those tools are too detailed too early in the process. If he makes a polished render or CAD model before the client is aligned, then every change becomes expensive.
+
+He described needing a faster layout step before committing to detailed modeling.
+
+> “If there was a way to easily make those layouts from standard components and to see how much space they're going to take, what the dimensions of the whole system going to be… an easy way to know what's the plan, the floor plan of the system.”
+
+This became the core direction of the project: a layout planner that sits between a rough conversation and a final engineering model.
+
+---
+
+### Insight 3: The tool needs to be editable because Nihar’s work is custom
+
+A fixed product catalog would not be enough. Nihar often works with custom chamber types, controller combinations, and client-specific system requirements. During feedback, he specifically asked for the ability to add, subtract, and edit components in the left-side component panel.
+
+From my notes:
+
+> “Wants a way to add/subtract components/parts to the left handside panel. For instance, if he designs a different kind of chamber/controller, he wants a way to add that.”
+
+This changed the project from a static BioSpherix catalog into a tool that Nihar can keep adapting as his work changes.
+
+---
+
+### Insight 4: Language matters because this is a professional engineering context
+
+Nihar’s feedback also showed that small wording choices affect whether the tool feels professional and accurate. He asked to change “Bench” to “Floor,” because the system is not always limited to a bench setup. He also asked to change “Bench Configuration” to “System Configuration,” which better matches the way he thinks about complete BioSpherix setups.
+
+Specific feedback notes included:
+
+- Change “Bench” to “Floor”
+- Change “Bench Configuration” to “System Configuration”
+- Remove “Custom System”
+- Rename “BioSpherix Layout Planner” to “Design Your Lab”
+- Add the actual BioSpherix/Breeze Group logo
+- Add a way to edit current component card information
+- Add a way to create new categories
+
+These were not visual polish requests. They were signs that the tool needed to feel like something that could belong in his real workflow.
+
+---
+
+## Observed Pain Points
+
+### Pain Point 1: Existing tools are too slow for early client alignment
+
+Blender and CAD tools are useful once the direction is clear, but they are too slow for quick client revisions. If a client changes the chamber count, controller setup, or footprint requirement, Nihar has to redo work that may have taken hours.
+
+### Pain Point 2: Whiteboard sketches are fast but not client-ready
+
+Sketching is useful during conversation, but it does not produce a polished artifact. It does not clearly show scale, dimensions, components, gas needs, or proposal language. A client may understand the general idea, but not enough to confidently approve the setup.
+
+### Pain Point 3: Clients need visual clarity
+
+Many BioSpherix clients are scientists, researchers, or lab teams. They may understand their protocol, but not the mechanical arrangement of chambers, controllers, gas lines, or required footprint. The layout tool helps make the system visible and easier to discuss.
+
+### Pain Point 4: Nihar needs control over the component library
+
+Because Nihar’s work changes from client to client, the component library cannot be locked. He needs to add new parts, edit existing cards, create categories, and adjust component information when specifications change.
+
+---
+
+## Research Photos / Evidence
+
+The research documentation includes photos of handwritten feedback notes taken during the prototype review process.
+
+Add these images to the README here:
+
+```md
+![Handwritten feedback notes from Nihar reviewing the prototype](assets/research/nihar-feedback-notes-01.jpg)
+
+![Second round of prototype feedback notes showing naming and logo changes](assets/research/nihar-feedback-notes-02.jpg)

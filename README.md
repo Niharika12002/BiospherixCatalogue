@@ -288,6 +288,134 @@ The browser becomes the shared workspace where a client’s needs can turn into 
 
 ---
 
+## Shipped Product
+
+The shipped product is a working web application called **Design Your Lab**.
+
+It is a BioSpherix layout planning tool built for Nihar to use before detailed CAD, Blender rendering, or fabrication planning. The app helps him move from a client conversation to a visible system configuration by arranging chambers, controllers, and other equipment on a scaled floor plan.
+
+**Live Project:** https://niharika12002.github.io/BiospherixCatalogue/  
+**GitHub Repository:** https://github.com/Niharika12002/BiospherixCatalogue
+
+### What Ships
+
+The final build includes:
+
+- A browser-based React interface hosted on GitHub Pages
+- A BioSpherix-style component library
+- Editable component cards
+- Editable categories
+- A scaled floor-plan canvas
+- Project and client fields
+- Floor width and depth inputs
+- Drag-and-place component layout
+- Live readout for footprint, components, chambers, controllers, weight, and third-party items
+- Gases required based on selected components
+- Parts and component information
+- Pricing estimate controls for customization and discount
+- Auto-generated design intent language
+- Print proposal output
+
+The project is not a static mockup. It can be opened through the live URL, interacted with in the browser, edited during use, and shown to Nihar during a real prototype review.
+
+### Why It Solves the Stated Problem
+
+The original problem was not that Nihar lacked access to BioSpherix product information. The problem was that he needed a faster way to translate a client conversation into a spatial system layout.
+
+The shipped product addresses that by giving him a working space between a rough conversation and a detailed engineering model. He can select system parts, arrange them visually, adjust the floor size, review the system readout, and generate client-facing language before investing time into Fusion 360, SolidWorks, or Blender.
+
+### Honest Current Limitation
+
+The pricing panel is a working estimate system, not a final BioSpherix quoting system. Base prices and discounts are editable planning values and would need to be replaced with Nihar’s actual internal catalog or quote data before professional client use. This limitation is intentional in the documentation so the project does not pretend to have access to private company pricing.
+
+---
+
+## Marketing Minute
+
+The marketing minute presents **Design Your Lab** as a fast, professional planning tool for early BioSpherix client conversations.
+
+**Marketing Minute Video:** [ADD FINAL VIDEO LINK HERE BEFORE SUBMISSION]
+
+### Marketing Minute Concept
+
+The video communicates the project in one clear arc:
+
+1. **The problem:** Nihar loses time translating client requirements into visual system plans before the build.
+2. **The tool:** Design Your Lab lets him place BioSpherix components onto a scaled floor plan, adjust system details, and create a client-ready proposal.
+3. **The value:** The client can understand footprint, components, gases, pricing estimates, and design intent earlier.
+4. **The outcome:** Nihar can align with the client before spending time in CAD, Blender, or detailed engineering.
+
+### Suggested Voiceover
+
+> Before a BioSpherix system becomes a CAD model, render, or build, it starts as a conversation. Design Your Lab helps Nihar turn that conversation into a clear system layout. He can select chambers and controllers, arrange them on a scaled floor plan, review gases and footprint, adjust pricing estimates, and generate a client-ready proposal. It is not a replacement for engineering software. It is the missing step before engineering begins.
+
+### Evidence to Include in the Video
+
+The marketing minute should include:
+
+- A quick view of the live app
+- Component selection from the library
+- Components placed on the floor plan
+- Live readout, gases, and pricing changing
+- The generated design intent paragraph
+- The printable proposal view
+- A final title card with the live project name
+
+---
+
+## User Testing & Evidence
+
+The prototype was tested with Nihar through live review calls. This section separates the testing evidence from the general research documentation so the iteration process is clear.
+
+### Testing Setup
+
+Nihar reviewed the working prototype during a call while the app was open. The prototype included the left-side component library, the scaled floor-plan canvas, BioSpherix-style component cards, and the system configuration interface.
+
+The goal of the test was to see whether the tool matched the moment in Nihar’s workflow where he needs to align with a client before committing to detailed CAD or rendering work.
+
+### What Worked
+
+- Nihar understood the value of a layout planner because it matched a real gap before CAD and Blender work.
+- The component library made sense as a starting point for standard BioSpherix chambers and controllers.
+- The scaled floor-plan direction matched his need to understand physical footprint.
+- The client-facing proposal direction matched his need to communicate design intent, not just show parts.
+- The browser-based format made sense because it could be opened and screen-shared during a client conversation.
+
+### What Failed or Needed Revision
+
+- The component library could not remain fixed because Nihar’s work often involves custom configurations.
+- The early wording was not precise enough. “Bench” was too narrow, and “Bench Configuration” did not describe the full system clearly enough.
+- Placeholder or generic branding made the tool feel less credible for professional use.
+- The app needed a way to edit current component card information, not just place components.
+- The app needed a way to add new categories as Nihar’s library changes.
+
+### Iterations Based on Testing
+
+Nihar’s feedback directly changed the project:
+
+- Added the need for add/remove component controls
+- Added the need for editable component cards
+- Added the need for custom categories
+- Changed “Bench” to “Floor”
+- Changed “Bench Configuration” to “System Configuration”
+- Removed “Custom System”
+- Renamed the project to **Design Your Lab**
+- Added BioSpherix / Breeze Group branding direction
+- Strengthened the tool as a proposal builder rather than a static catalog
+
+### Evidence
+
+Evidence of user testing is included in the research section through:
+
+- FaceTime research screenshots
+- A live prototype review screenshot
+- Handwritten feedback notes from Nihar
+- Documented changes made after prototype review
+
+The evidence shows that the project was tested with the person it was built for, not only reviewed in my own browser.
+
+---
+
 ## AI Direction Log
 
 This log documents how AI was used across the project. I did not use AI as the final decision-maker. I used it as a thinking partner, writing partner, coding assistant, and documentation assistant. My role was to direct the project based on Nihar’s actual workflow, reject generic outputs, and keep the tool grounded in the person I was designing for.

@@ -100,23 +100,27 @@ The most important shift in the project came from the interviews. Early on, the 
 
 ### Research Evidence
 
-These screenshots and notes document the research and testing process with Nihar.
+These screenshots and notes document the research and testing process with Nihar. They show that the project was shaped through real conversation, prototype review, and direct feedback instead of being designed from assumptions.
 
-![FaceTime research call with Nihar](assets/research/nihar-research-call-01.png)
+![FaceTime research call with Nihar](assets/research/nihar-research-call-01.PNG)
 
-*FaceTime research call with Nihar during the early workflow interview process.*
+*Early FaceTime research call with Nihar during the workflow interview process.*
 
-![Nihar reviewing the BioSpherix layout planner prototype during a call](assets/research/prototype-review-call.png)
+![Follow-up FaceTime research call with Nihar](assets/research/nihar-research-call-02.PNG)
+
+*Follow-up research conversation with Nihar while clarifying what the tool needed to do.*
+
+![Nihar reviewing the BioSpherix layout planner prototype during a call](assets/research/prototype-review-call.PNG)
 
 *Nihar reviewing the working prototype during a live call. The screen shows the component library, scaled layout canvas, and early BioSpherix-style interface.*
 
-![Handwritten feedback notes from Nihar reviewing the prototype](assets/research/nihar-feedback-notes-01.jpg)
+![Handwritten feedback notes from Nihar reviewing the prototype](assets/research/nihar-feedback-notes-01.JPG)
 
-*Handwritten feedback notes from Nihar’s prototype review.*
+*Handwritten feedback notes from Nihar’s prototype review. These notes include requests for adding and removing components, changing “Bench” to “Floor,” adding new categories, editing component cards, and using the real BioSpherix / Breeze Group logo.*
 
-![Second round of prototype feedback notes showing naming and logo changes](assets/research/nihar-feedback-notes-02.jpg)
+![Second round of prototype feedback notes showing naming and logo changes](assets/research/nihar-feedback-notes-02.JPG)
 
-*Second round of feedback notes showing naming, branding, and component-library changes.*
+*Second round of feedback notes showing naming, branding, and component-library changes, including changing “Bench Configuration” to “System Configuration” and renaming the app to “Design Your Lab.”*
 
 ### Interview Insights
 

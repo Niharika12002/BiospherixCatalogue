@@ -1086,6 +1086,31 @@ const PRODUCT_IMAGES = {
 }
 };
 
+/* ============================================================
+   COMPONENT LIBRARY DATA — sourced from official BioSpherix PDFs
+   Dimensions in inches.
+   Base prices are placeholder estimates for demonstration.
+   Nihar — edit values here to match your actual catalog pricing.
+============================================================ */
+const COMPONENTS = [
+  // Chambers
+  { id: 'c174',     name: 'C-Chamber',         variant: '1-shelf',  type: 'chamber',    w: 14,    d: 13, h: 5.25, weight: null, gases: ['O₂','CO₂'], part: 'C174', basePrice: 2500 },
+  { id: 'c274',     name: 'C-Chamber',         variant: '2-shelf',  type: 'chamber',    w: 14,    d: 13, h: 6,    weight: null, gases: ['O₂','CO₂'], part: 'C274', basePrice: 2800 },
+  { id: 'c374',     name: 'C-Chamber',         variant: '3-shelf',  type: 'chamber',    w: 14,    d: 13, h: 8,    weight: null, gases: ['O₂','CO₂'], part: 'C374', basePrice: 3200 },
+  { id: 'c474',     name: 'C-Chamber',         variant: '4-shelf',  type: 'chamber',    w: 14,    d: 13, h: 10,   weight: null, gases: ['O₂','CO₂'], part: 'C474', basePrice: 3600 },
+  // Compact controllers
+  { id: 'proxp110', name: 'ProOx P110',        variant: 'Compact O₂',                  type: 'controller', w: 8.875, d: 9, h: 4.375, weight: 3.9, gases: ['O₂'],         part: 'P110', cap: 'oxygen control', basePrice: 3500 },
+  { id: 'proxp360', name: 'ProOx P360',        variant: 'High-infusion O₂',            type: 'controller', w: 8.875, d: 9, h: 4.375, weight: 4.1, gases: ['O₂'],         part: 'P360', cap: 'high-infusion-rate oxygen control', basePrice: 5500 },
+  { id: 'proco2',   name: 'ProCO₂ P120',       variant: 'Compact CO₂',                 type: 'controller', w: 8.875, d: 9, h: 4.375, weight: 3.9, gases: ['CO₂'],        part: 'P120', cap: 'CO₂ regulation', basePrice: 3500 },
+  { id: 'proxc21',  name: 'ProOx C21',         variant: 'Compact O₂ + CO₂',            type: 'controller', w: 8.875, d: 9, h: 4.375, weight: 4.7, gases: ['O₂','CO₂'],   part: 'C21',  cap: 'combined O₂ and CO₂ control', basePrice: 5000 },
+  // Dynamic / advanced controllers
+  { id: 'oxyc42',   name: 'OxyCycler C42',     variant: 'Dynamic O₂/CO₂/N₂',           type: 'controller', w: 11,    d: 10, h: 7,    weight: null, gases: ['O₂','CO₂','N₂'], part: 'C42',  cap: 'dynamic O₂/CO₂ cycling for paired experimental and control conditions', basePrice: 12000 },
+  { id: 'oxystr',   name: 'OxyStreamer',       variant: 'Perfusion gas pre-conditioner', type: 'controller', w: 7,    d: 9, h: 13,   weight: null, gases: ['O₂','CO₂','N₂'], part: 'OxyStreamer', cap: 'gas pre-conditioning for perfusion media', basePrice: 14000 },
+  { id: 'gt41',     name: 'OxyCycler GT41',    variant: 'Gasotransmitter-capable',     type: 'controller', w: 11,    d: 10, h: 7,    weight: null, gases: ['O₂','CO₂','RH'], part: 'GT41', cap: 'gasotransmitter-capable control (O₂, CO₂, RH, with optional CO/NO)', basePrice: 18000 },
+  // Placeholder for third-party
+  { id: '3rd',      name: 'Third-party equipment', variant: 'placeholder',             type: 'thirdparty', w: 12,    d: 12, h: 12,   weight: null, gases: [],             part: '—', basePrice: 0 },
+];
+
 const findComp = (id) => COMPONENTS.find(c => c.id === id);
 
 /* ============================================================

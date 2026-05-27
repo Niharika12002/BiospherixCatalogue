@@ -479,3 +479,148 @@ The most important design decisions came from Nihar’s work context, not from A
 AI helped me move faster, organize my thinking, write clearer documentation, and translate research into product decisions. But the final direction came from Nihar’s workflow and feedback.
 
 The biggest example of this was the shift from a BioSpherix catalog to a layout planner. AI could help produce the app, write prompts, and organize the case study, but the core design decision came from listening to Nihar and understanding what would actually help him.
+
+---
+
+## Records of Resistance
+
+This section documents moments where I rejected, corrected, or significantly revised AI output. These moments were important because they show that I was not using AI to make decisions for me. I was using AI as a collaborator, then pushing back whenever its output became too generic, too polished, too broad, or disconnected from Nihar’s actual workflow.
+
+### Resistance 1: Rejecting the product catalog direction
+
+**What AI produced:**  
+Early in the project, AI’s suggestions leaned toward building a BioSpherix product catalog or product browser. This made sense on the surface because BioSpherix has many chambers, controllers, and system parts.
+
+**Why I rejected it:**  
+After interviewing Nihar, I realized that a catalog was not the real problem. BioSpherix already has product information available. Nihar did not need another place to browse products. He needed a way to arrange those products into a system layout that could be discussed with a client.
+
+**What I did instead:**  
+I changed the project direction from a catalog browser to a layout planner. The final tool focuses on helping Nihar build a spatial system configuration with chambers, controllers, dimensions, and layout logic.
+
+**Why this mattered:**  
+This was the most important resistance moment in the project. It kept the tool from becoming a generic product website and redirected it toward Nihar’s actual pain point: early client alignment.
+
+---
+
+### Resistance 2: Rejecting placeholder visuals and generic BioSpherix content
+
+**What AI produced:**  
+When I asked for a prompt to build the React app, AI initially suggested using image placeholders for the visuals and product areas.
+
+**Why I rejected it:**  
+Placeholder images would have made the tool feel like a class prototype instead of something connected to Nihar’s real work. Since BioSpherix is a real company with real equipment, the visual and product information needed to feel specific and credible.
+
+**What I did instead:**  
+I revised the direction and asked for actual BioSpherix product images and real product references instead of generic placeholders.
+
+**Why this mattered:**  
+Nihar would immediately know if the tool felt fake. Using real product references helped the app feel closer to a professional BioSpherix system planning tool.
+
+---
+
+### Resistance 3: Rejecting overcomplicated platform ideas
+
+**What AI produced:**  
+AI helped compare possible platform directions, including CAD plugins, Blender/3D rendering, PDFs, Unity-style experiences, and more advanced builds.
+
+**Why I rejected it:**  
+Those directions were either too technical, too slow, or too disconnected from the moment where Nihar actually needed help. Nihar’s problem happens before detailed CAD or rendering. It happens during early client conversations, when the system is still being discussed.
+
+**What I did instead:**  
+I chose a browser-based React app hosted on GitHub Pages.
+
+**Why this mattered:**  
+A browser app fits the real use case. Nihar can open it during a call, screen-share it, make changes quickly, and use it without asking the client to install or understand engineering software.
+
+---
+
+### Resistance 4: Rejecting a fixed component library
+
+**What AI produced:**  
+The early app direction treated the component library as a set of fixed BioSpherix parts.
+
+**Why I rejected it:**  
+Nihar’s work is custom. During feedback, he specifically asked for a way to add and subtract components, add new categories, and edit the information on the component cards. A fixed library would become outdated as soon as his project needs changed.
+
+**What I did instead:**  
+I revised the product direction so the component library had to be treated as editable and expandable, not just a static menu.
+
+**Why this mattered:**  
+This changed the tool from a demo into something that could belong to Nihar. If he cannot adapt the library, the tool is just a presentation. If he can edit it, it becomes a working system.
+
+---
+
+### Resistance 5: Rejecting AI/prototype language that did not match Nihar’s work
+
+**What AI produced:**  
+The early interface used terms like “Bench,” “Bench Configuration,” “Custom System,” and “BioSpherix Layout Planner.”
+
+**Why I rejected it:**  
+Nihar’s feedback made it clear that these words were not accurate enough. “Bench” was too narrow because the systems are not always limited to a bench. “Custom System” felt unnecessary. “BioSpherix Layout Planner” sounded generic and less client-facing.
+
+**What I did instead:**  
+I changed the language based on Nihar’s feedback:
+
+- “Bench” became “Floor”
+- “Bench Configuration” became “System Configuration”
+- “Custom System” was removed
+- “BioSpherix Layout Planner” became “Design Your Lab”
+
+**Why this mattered:**  
+The wording change was not just visual polish. It made the interface sound more like Nihar’s actual professional context and less like a temporary class prototype.
+
+---
+
+### Resistance 6: Rejecting the idea that the app should look playful or consumer-facing
+
+**What AI produced:**  
+Some AI-generated design directions could have pushed the interface toward a friendlier, more generic app style.
+
+**Why I rejected it:**  
+Nihar works in a clinical and engineering context. The tool may be shown to researchers, lab teams, or clients. If it feels too playful, it loses credibility.
+
+**What I did instead:**  
+I kept the interface restrained, professional, and technical. I avoided emoji, unnecessary decoration, and overly casual language.
+
+**Why this mattered:**  
+The tool needed to be client-ready by default. Nihar should be able to screen-share it without feeling like he is showing a student mockup.
+
+---
+
+### Resistance 7: Rejecting AI’s tendency to make the README too polished without enough proof
+
+**What AI produced:**  
+AI helped generate strong written sections for the README, but some versions sounded more like a design essay than a complete project submission.
+
+**Why I rejected it:**  
+The assignment requires evidence: research documentation, user testing, photos, quotes, the shipped product, and records of process. A polished explanation is not enough if it does not show proof that I listened to Nihar.
+
+**What I did instead:**  
+I added research screenshots, FaceTime documentation, prototype review images, handwritten feedback notes, and detailed explanations of how Nihar’s feedback changed the project.
+
+**Why this mattered:**  
+This made the README more credible. It shows that the project was shaped by a real person and not just by AI-generated writing.
+
+---
+
+### Resistance 8: Correcting broken Markdown formatting
+
+**What AI produced:**  
+At one point, the README formatting broke because a Markdown code block was opened but not closed correctly. This caused later sections to appear incorrectly.
+
+**Why I rejected it:**  
+Broken formatting made the README look unfinished and hard to read. Since the README is part of the final submission, the documentation needed to be clean and professional.
+
+**What I did instead:**  
+I corrected the Markdown structure, fixed the heading hierarchy, and updated the image paths so the research images could display properly.
+
+**Why this mattered:**  
+The README is the public case study for the project. Even if the app works, broken documentation would weaken the final submission.
+
+---
+
+### Resistance Summary
+
+The biggest resistance moment was rejecting the catalog direction and turning the project into a layout planner. That decision came from listening to Nihar, not from accepting AI’s first idea.
+
+Across the project, I kept using AI for speed, structure, and production help, but I pushed back whenever the output became too generic, too polished, too technical, or too disconnected from the person I was designing for. The final product is stronger because the direction came from research, not from AI default patterns.

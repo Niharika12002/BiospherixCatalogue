@@ -739,26 +739,68 @@ The final product is not a finished commercial tool, but it is a meaningful step
 
 ## Mermaid Diagram
 
-This diagram shows how **Design Your Lab** receives input from Nihar, processes system information inside the React app, stores editable component data, and outputs a client-ready layout proposal.
+This diagram shows the full system architecture of **Design Your Lab**: what Nihar inputs, how the React app processes that information, where data is stored, and what the tool outputs for client-facing use.
 
 ```mermaid
-flowchart TD
+flowchart LR
 
-    %% =========================
-    %% INPUTS
-    %% =========================
+    %% INPUT
+    subgraph INPUT["INPUT"]
+        A["Nihar"]
+        B["Client requirements"]
+        C["Project + client info"]
+        D["Floor size"]
+        E["Selected components"]
+        F["Custom components / categories"]
+        G["Pricing adjustments"]
+    end
 
-    subgraph INPUT["INPUT: What Nihar enters or selects"]
-        A["Nihar / Mechanical Engineer"]
-        B["Client conversation"]
-        C["Project name"]
-        D["Client name"]
-        E["Floor width + floor depth"]
-        F["Selected BioSpherix components"]
-        G["Custom or edited components"]
-        H["Component categories"]
-        I["Placed component positions"]
-        J["Customization + discount values"]
+    %% APP
+    subgraph APP["CLIENT-SIDE REACT APP"]
+        H["index.html"]
+        I["React + Babel CDN"]
+        J["BioSpherix styling"]
+        K["Embedded product images"]
+        L["Default component data"]
+    end
+
+    %% STATE
+    subgraph STATE["REACT STATE + STORAGE"]
+        M["Project state"]
+        N["Library state"]
+        O["Layout state"]
+        P["Pricing state"]
+        Q["localStorage"]
+    end
+
+    %% PROCESSING
+    subgraph PROCESS["PROCESSING"]
+        R["Component editor"]
+        S["Scaled floor-plan canvas"]
+        T["Drag + position logic"]
+        U["Stats calculator"]
+        V["Gas + parts extractor"]
+        W["Design intent generator"]
+        X["Pricing calculator"]
+        Y["Print stylesheet"]
+    end
+
+    %% OUTPUT
+    subgraph OUTPUT["OUTPUT"]
+        Z["Scaled floor plan"]
+        AA["Live system readout"]
+        AB["Gases required"]
+        AC["Parts / component summary"]
+        AD["Pricing estimate"]
+        AE["Generated design intent"]
+        AF["Printable client proposal"]
+    end
+
+    %% WORKFLOW RESULT
+    subgraph RESULT["WORKFLOW RESULT"]
+        AG["Nihar reviews layout with client"]
+        AH["Client understands system plan"]
+        AI["Earlier alignment before CAD / Blender"]
     end
 
     A --> B
@@ -767,238 +809,75 @@ flowchart TD
     B --> E
     B --> F
     B --> G
-    B --> H
-    B --> I
-    B --> J
 
-    %% =========================
-    %% APPLICATION SHELL
-    %% =========================
+    C --> M
+    D --> M
+    E --> O
+    F --> N
+    G --> P
 
-    subgraph APP["CLIENT-SIDE APP: Single-file React application"]
-        K["index.html"]
-        L["React + ReactDOM from CDN"]
-        M["Babel in browser"]
-        N["Embedded CSS / BioSpherix styling"]
-        O["Embedded product image thumbnails"]
-        P["Default component data"]
-    end
+    H --> I
+    H --> J
+    H --> K
+    H --> L
 
-    K --> L
-    K --> M
-    K --> N
-    K --> O
-    K --> P
+    I --> M
+    I --> N
+    I --> O
+    I --> P
+    L --> N
 
-    %% =========================
-    %% STATE
-    %% =========================
+    N --> Q
+    Q --> N
 
-    subgraph STATE["REACT STATE: Current working system"]
-        Q["Project state"]
-        R["Library state"]
-        S["Layout state"]
-        T["Pricing state"]
+    N --> R
+    R --> N
 
-        Q1["projectName, clientName"]
-        Q2["floor width, floor depth"]
+    M --> S
+    N --> S
+    O --> S
 
-        R1["components"]
-        R2["categories"]
-        R3["edited component specs"]
+    O --> T
+    T --> O
 
-        S1["placed components"]
-        S2["selected component"]
-        S3["dragging component"]
-        S4["x/y positions"]
+    M --> U
+    N --> U
+    O --> U
 
-        T1["base prices"]
-        T2["customization percent"]
-        T3["discount percent"]
-    end
+    N --> V
+    O --> V
 
-    C --> Q1
-    D --> Q1
-    E --> Q2
-    F --> S1
-    G --> R3
-    H --> R2
-    I --> S4
-    J --> T2
-    J --> T3
+    M --> W
+    U --> W
+    V --> W
 
-    Q --> Q1
-    Q --> Q2
-    R --> R1
-    R --> R2
-    R --> R3
-    S --> S1
-    S --> S2
-    S --> S3
-    S --> S4
-    T --> T1
-    T --> T2
-    T --> T3
+    N --> X
+    O --> X
+    P --> X
 
-    L --> Q
-    L --> R
-    L --> S
-    L --> T
-    P --> R1
-
-    %% =========================
-    %% PERSISTENCE
-    %% =========================
-
-    subgraph STORAGE["BROWSER STORAGE"]
-        U["localStorage"]
-        U1["Saves edited library"]
-        U2["Restores components + categories on reload"]
-    end
-
-    R --> U
-    U --> U1
-    U --> U2
-    U2 --> R
-
-    %% =========================
-    %% PROCESSING
-    %% =========================
-
-    subgraph PROCESS["PROCESSING: How the app transforms the inputs"]
-        V["Component editor"]
-        W["Floor-plan canvas engine"]
-        X["System stats calculator"]
-        Y["Gas + parts extractor"]
-        Z["Design intent generator"]
-        AA["Pricing calculator"]
-        AB["Print stylesheet"]
-
-        V1["Add component"]
-        V2["Edit component"]
-        V3["Delete component"]
-        V4["Create category"]
-
-        W1["Calculate pixels per inch"]
-        W2["Draw 1-inch grid"]
-        W3["Place components to scale"]
-        W4["Convert mouse drag to inches"]
-        W5["Keep components inside floor bounds"]
-
-        X1["Count chambers, controllers, third-party items"]
-        X2["Calculate footprint bounding box"]
-        X3["Calculate known weight"]
-
-        Y1["Collect required gases"]
-        Y2["Collect part numbers"]
-
-        Z1["Generate client-facing system paragraph"]
-
-        AA1["Calculate item totals"]
-        AA2["Apply custom markup"]
-        AA3["Apply discount"]
-        AA4["Calculate final total"]
-
-        AB1["Hide editing controls"]
-        AB2["Format printable proposal"]
-    end
-
-    R --> V
-    V --> V1
-    V --> V2
-    V --> V3
-    V --> V4
-    V1 --> R
-    V2 --> R
-    V3 --> R
-    V4 --> R
-
-    Q --> W
-    R --> W
-    S --> W
-    W --> W1
-    W --> W2
-    W --> W3
-    W --> W4
-    W --> W5
-
-    Q --> X
-    R --> X
-    S --> X
-    X --> X1
-    X --> X2
-    X --> X3
-
-    R --> Y
-    S --> Y
-    Y --> Y1
-    Y --> Y2
-
-    Q --> Z
-    R --> Z
     S --> Z
-    X --> Z
-    Y --> Z
-    Z --> Z1
-
-    R --> AA
-    S --> AA
-    T --> AA
-    AA --> AA1
-    AA --> AA2
-    AA --> AA3
-    AA --> AA4
-
-    W --> AB
-    X --> AB
-    Y --> AB
-    Z --> AB
-    AA --> AB
-    AB --> AB1
-    AB --> AB2
-
-    %% =========================
-    %% OUTPUTS
-    %% =========================
-
-    subgraph OUTPUT["OUTPUT: What the app shows or produces"]
-        AC["Scaled floor plan"]
-        AD["Live readout panel"]
-        AE["Gases required"]
-        AF["Parts and component information"]
-        AG["Pricing panel"]
-        AH["Generated design intent"]
-        AI["Printable client proposal"]
-    end
-
-    W --> AC
+    U --> AA
+    V --> AB
+    V --> AC
     X --> AD
-    Y1 --> AE
-    Y2 --> AF
+    W --> AE
+
+    Z --> Y
+    AA --> Y
+    AB --> Y
+    AC --> Y
+    AD --> Y
+    AE --> Y
+    Y --> AF
+
+    Z --> AG
     AA --> AG
-    Z1 --> AH
-    AB2 --> AI
+    AB --> AG
+    AC --> AG
+    AD --> AG
+    AE --> AG
+    AF --> AG
 
-    %% =========================
-    %% WORKFLOW RESULT
-    %% =========================
-
-    subgraph RESULT["REAL WORKFLOW RESULT"]
-        AJ["Nihar reviews layout during client conversation"]
-        AK["Client understands system footprint, components, gases, and estimate"]
-        AL["Earlier alignment before detailed CAD or Blender work"]
-        AM["Next step: Fusion 360, SolidWorks, Blender, or fabrication planning"]
-    end
-
-    AC --> AJ
-    AD --> AJ
-    AE --> AJ
-    AF --> AJ
-    AG --> AJ
-    AH --> AJ
-    AI --> AJ
-
-    AJ --> AK
-    AK --> AL
-    AL --> AM
+    AG --> AH
+    AH --> AI
 ```

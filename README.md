@@ -624,3 +624,65 @@ The README is the public case study for the project. Even if the app works, brok
 The biggest resistance moment was rejecting the catalog direction and turning the project into a layout planner. That decision came from listening to Nihar, not from accepting AI’s first idea.
 
 Across the project, I kept using AI for speed, structure, and production help, but I pushed back whenever the output became too generic, too polished, too technical, or too disconnected from the person I was designing for. The final product is stronger because the direction came from research, not from AI default patterns.
+
+---
+
+## Five Questions Reflection
+
+### 1. Can I defend this?
+
+Yes. I can defend this project because the major design decisions point back to Nihar’s actual workflow, not just my personal taste or AI’s suggestions.
+
+The decision to build a layout planner came directly from Nihar describing the need to quickly make system layouts from standard components and understand the space they would take. The decision to make it browser-based came from the fact that his client conversations happen through shared screens, not inside Fusion 360 or SolidWorks. The decision to make the component library editable came from his feedback that he needed to add, remove, and edit chambers, controllers, and categories.
+
+Even smaller interface decisions are defensible. Changing “Bench” to “Floor,” changing “Bench Configuration” to “System Configuration,” removing “Custom System,” and renaming the app to “Design Your Lab” all came from Nihar’s feedback. These choices were not made because they sounded better in a vacuum. They were made because they better matched the language and flexibility of his real work.
+
+The project is defensible because it is tied to a person, a context, and a specific workflow problem.
+
+---
+
+### 2. Is this mine?
+
+Yes. AI helped me move faster, but I directed the project.
+
+AI helped me organize research, write prompts, generate README sections, and think through possible platform choices. But the important decisions came from my understanding of Nihar and from the interviews. I did not accept AI’s first direction when it leaned toward a product catalog, because the research showed that a catalog was not the problem. I redirected the project toward a layout planner.
+
+I also rejected generic placeholder visuals, overly broad product ideas, and language that did not match Nihar’s work. The project became mine through the decisions I made after AI produced something. I kept what supported the design argument and changed or rejected what did not.
+
+This is not mine because I coded every line alone. It is mine because I owned the direction, protected the research, and made the final calls.
+
+---
+
+### 3. Did I verify?
+
+Yes, but with the limits of the project timeline.
+
+I verified the direction by testing the working prototype with Nihar over a live call. He reviewed the interface, saw the component library and layout canvas, and gave specific feedback about what would make the tool more useful for his workflow.
+
+The feedback was concrete. He asked for the ability to add and subtract components, create new categories, edit component card information, change “Bench” to “Floor,” change “Bench Configuration” to “System Configuration,” remove “Custom System,” rename the tool, and use the real logo.
+
+That testing confirmed that the tool was pointed in the right direction, but also showed what still needed to improve. I am not claiming that the product is fully proven as a long-term professional tool yet. What I verified is that the concept, platform, and core workflow matched a real need Nihar recognized.
+
+---
+
+### 4. Would I teach this?
+
+Yes. I could explain the research process, the design rationale, and the system architecture to another designer.
+
+The research process started with understanding Nihar’s workflow instead of assuming what he needed. The design rationale was built around one key problem: he needed a faster way to move from client conversation to system layout before investing time in CAD or rendering. The platform rationale followed from that: a browser-based React app made the most sense because it could be opened, shared, and revised quickly during a client call.
+
+I could also explain the structure of the product. The app has a component library, layout canvas, project/client fields, editable system information, and a proposal-style direction. These parts work together because the tool is about building and communicating a system configuration, not just showing products.
+
+I understand the project well enough to explain why it exists, how it works, and what should be improved next.
+
+---
+
+### 5. Is my disclosure honest?
+
+Yes. My AI Direction Log and Records of Resistance reflect what actually happened during the project.
+
+AI was used throughout the process, especially for organizing thoughts, writing prompts, generating documentation, and helping shape the React app direction. But I did not hide that. I documented where AI helped and where I pushed back.
+
+The biggest example is the shift from a BioSpherix catalog to a layout planner. That was not AI’s default direction. It came from listening to Nihar and realizing that the real problem was spatial planning and client alignment. I also documented the moments where I rejected placeholder visuals, overcomplicated platform ideas, fixed component libraries, and generic language.
+
+The disclosure is honest because it does not pretend AI was absent, and it does not pretend AI made the design decisions alone. The project came from a collaboration between my research, Nihar’s feedback, and AI-supported production.

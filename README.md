@@ -285,3 +285,197 @@ The platform choice follows the person.
 Nihar needed a tool that was faster than Blender, less technical than CAD, more flexible than a PDF, and easier to access than a specialized installation. A React web app was the best fit because it lives exactly where the problem happens: during the conversation between Nihar and the client.
 
 The browser becomes the shared workspace where a client’s needs can turn into a visible system layout before Nihar invests time in detailed engineering work.
+
+---
+
+## AI Direction Log
+
+This log documents how AI was used across the project. I did not use AI as the final decision-maker. I used it as a thinking partner, writing partner, coding assistant, and documentation assistant. My role was to direct the project based on Nihar’s actual workflow, reject generic outputs, and keep the tool grounded in the person I was designing for.
+
+### Entry 1: Understanding the Project 3 brief
+
+**What I asked AI to do:**  
+I first asked AI to help me understand what Project 3 required and what kind of work needed to be submitted.
+
+**What AI produced:**  
+AI broke the assignment into major deliverables: a real person, a shipped product, research documentation, evidence of use, a design argument, platform rationale, AI process documentation, and final README/case study materials.
+
+**What I kept, changed, or rejected:**  
+I kept the structure because it helped me understand that this project was not just about making a web app. It needed proof that I listened to a real person and built something for their actual context.
+
+**Why:**  
+This helped me treat the project as a full design process instead of only a coding assignment.
+
+---
+
+### Entry 2: Choosing who the project should be for
+
+**What I asked AI to do:**  
+I talked through possible directions for Project 3, including making something for someone close to me who had a real workflow problem.
+
+**What AI produced:**  
+AI helped me think through possible users and what kinds of tools could support them.
+
+**What I kept, changed, or rejected:**  
+I moved toward Nihar because I had direct access to him, he had a specific professional workflow, and I could interview him multiple times. I rejected directions that felt too broad or too hard to validate in the time available.
+
+**Why:**  
+Project 3 required designing for a real person. Nihar was the strongest choice because I could actually talk to him, test with him, and get honest feedback.
+
+---
+
+### Entry 3: Preparing the first interview with Nihar
+
+**What I asked AI to do:**  
+Before interviewing Nihar, I asked AI to help me prepare questions about his work, pain points, repeated tasks, tools, and what would save him time.
+
+**What AI produced:**  
+AI helped organize questions such as:
+
+- Walk me through your current workflow from start to finish.
+- What part of your work takes the most time?
+- What do you repeat again and again?
+- What information do you constantly search for?
+- What would make this tool useful enough for you to actually use?
+
+**What I kept, changed, or rejected:**  
+I kept the questions that were simple and direct because Nihar did not have much time. I avoided making the interview too long or overly formal.
+
+**Why:**  
+The goal was to get useful information quickly without making the interview feel like homework for him.
+
+---
+
+### Entry 4: Synthesizing the interview
+
+**What I asked AI to do:**  
+After the interview, I gave AI the information from Nihar’s answers and asked it to help identify what the real tool should be.
+
+**What AI produced:**  
+AI identified themes around custom system design, product selection, client requirements, layout planning, dimensions, and communicating design intent.
+
+**What I kept, changed, or rejected:**  
+I kept the insight that Nihar needed help before the final CAD/rendering stage. I rejected the idea that the project should only be a BioSpherix catalog because BioSpherix already has product catalogs.
+
+**Why:**  
+The interview showed that the problem was not access to product information. The real problem was helping Nihar turn client conversations into system layouts quickly.
+
+---
+
+### Entry 5: Shifting from catalog browser to layout planner
+
+**What I asked AI to do:**  
+I asked AI to help refine the project after realizing that a catalog was not enough.
+
+**What AI produced:**  
+AI helped frame the tool as a layout builder where Nihar could select BioSpherix chambers, controllers, and system parts and arrange them visually.
+
+**What I kept, changed, or rejected:**  
+I kept the layout-planning direction. I rejected anything that made the app feel like a generic e-commerce/product browsing experience.
+
+**Why:**  
+Nihar’s work is not about browsing products casually. It is about configuring systems for specific clients. The tool needed to support system planning, not shopping.
+
+---
+
+### Entry 6: Writing the Claude prompt for the React app
+
+**What I asked AI to do:**  
+I asked AI to write a detailed prompt that I could give Claude to build the React web app.
+
+**What AI produced:**  
+AI created a detailed build prompt for a React layout planning tool with a component library, layout workspace, client/project fields, system summary, and proposal-style output.
+
+**What I kept, changed, or rejected:**  
+I kept the React app structure and the idea of a component-based layout workspace. I changed the prompt to make sure Claude used actual BioSpherix product images instead of generic placeholders.
+
+**Why:**  
+The app needed to feel connected to BioSpherix and Nihar’s work. Placeholder imagery would have made it feel like a class mockup instead of a professional tool.
+
+---
+
+### Entry 7: Choosing the platform
+
+**What I asked AI to do:**  
+I asked AI to help explain why this should live as a React web app instead of a CAD plugin, Blender file, static PDF, Unity build, or physical installation.
+
+**What AI produced:**  
+AI helped draft the platform rationale: the tool needed to be lightweight, browser-based, shareable during a client call, and easier to access than professional engineering software.
+
+**What I kept, changed, or rejected:**  
+I kept the argument that the browser is the shared space between Nihar and the client. I rejected any platform direction that would require the client to install software or understand CAD tools.
+
+**Why:**  
+The platform needed to match the person and the moment of use. Nihar’s problem happens during early client alignment, not after the system is already ready for detailed engineering.
+
+---
+
+### Entry 8: Turning prototype feedback into feature priorities
+
+**What I asked AI to do:**  
+After showing Nihar the prototype, I asked AI to help organize the handwritten feedback notes into README-ready research documentation.
+
+**What AI produced:**  
+AI grouped the feedback into practical changes: add and remove components, edit component cards, add new categories, change “Bench” to “Floor,” change “Bench Configuration” to “System Configuration,” remove “Custom System,” rename the app to “Design Your Lab,” and replace placeholder branding with the real BioSpherix / Breeze Group logo.
+
+**What I kept, changed, or rejected:**  
+I kept Nihar’s specific wording changes because they came directly from the person using the tool. I rejected treating these as small visual edits.
+
+**Why:**  
+The naming changes mattered because they made the tool feel more professional and closer to Nihar’s actual work language.
+
+---
+
+### Entry 9: Writing the README documentation
+
+**What I asked AI to do:**  
+I asked AI to help write the README sections, including the Design Argument, Research Documentation, Platform Rationale, and now the AI Direction Log.
+
+**What AI produced:**  
+AI helped turn the project process into clear written sections that explain the person, the problem, the research, the platform, and the role of AI.
+
+**What I kept, changed, or rejected:**  
+I kept the sections that explained the project clearly and matched the assignment. I changed wording when it felt too generic or when it needed to be more specific to Nihar. I also removed sections that belonged in the Blackboard submission instead of the GitHub README.
+
+**Why:**  
+The README needed to be more than a project description. It needed to show my design process, evidence of research, and decision-making.
+
+---
+
+### Entry 10: Fixing README structure and formatting
+
+**What I asked AI to do:**  
+I asked AI to fix the README formatting after sections started breaking because of incorrect Markdown.
+
+**What AI produced:**  
+AI identified that a Markdown code block had been opened but not closed, which caused later sections to appear incorrectly. It also helped clean the hierarchy of headings and image references.
+
+**What I kept, changed, or rejected:**  
+I kept the corrected formatting and heading structure. I changed the image paths to match the renamed research images in my GitHub repo.
+
+**Why:**  
+The README needs to be readable and professional because it is part of the final submission. Broken formatting would make the documentation look unfinished even if the project itself works.
+
+---
+
+### Entry 11: Maintaining design authority
+
+**What I asked AI to do:**  
+Throughout the project, I used AI to generate options, prompts, documentation, and code directions.
+
+**What AI produced:**  
+AI often produced polished writing and broad product suggestions, but some outputs were too generic or too disconnected from Nihar’s exact workflow.
+
+**What I kept, changed, or rejected:**  
+I kept AI’s help with structure, wording, and technical direction. I rejected generic product-catalog ideas, overcomplicated platform ideas, and anything that did not match Nihar’s feedback.
+
+**Why:**  
+The most important design decisions came from Nihar’s work context, not from AI. My job was to keep the project focused on the real person and make sure AI supported the design direction instead of replacing it.
+
+---
+
+### AI Direction Summary
+
+AI helped me move faster, organize my thinking, write clearer documentation, and translate research into product decisions. But the final direction came from Nihar’s workflow and feedback.
+
+The biggest example of this was the shift from a BioSpherix catalog to a layout planner. AI could help produce the app, write prompts, and organize the case study, but the core design decision came from listening to Nihar and understanding what would actually help him.

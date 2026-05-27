@@ -469,7 +469,10 @@ input, textarea { font-family: inherit; }
   color: var(--text);
   flex: 1;
   min-width: 0;
-  word-break: break-word;
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
 }
 
 .placed-footer {
@@ -478,6 +481,7 @@ input, textarea { font-family: inherit; }
   align-items: baseline;
   gap: 6px;
   margin-top: 4px;
+  min-width: 0;
 }
 
 .placed-dims {
@@ -485,6 +489,10 @@ input, textarea { font-family: inherit; }
   font-family: 'IBM Plex Mono', monospace;
   color: var(--text-2);
   letter-spacing: 0.02em;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  min-width: 0;
 }
 
 .placed-part {
@@ -493,6 +501,8 @@ input, textarea { font-family: inherit; }
   color: var(--orange-text);
   font-weight: 600;
   letter-spacing: 0.02em;
+  white-space: nowrap;
+  flex-shrink: 0;
 }
 
 .remove-btn {
@@ -1132,13 +1142,16 @@ const COMPONENTS = [
   { id: 'proxc21',  name: 'ProOx C21',         variant: 'Compact O₂ + CO₂',            type: 'controller', w: 8.875, d: 9, h: 4.375, weight: 4.7, gases: ['O₂','CO₂'],   part: 'C21',  cap: 'combined O₂ and CO₂ control', basePrice: 5000 },
   // Dynamic / advanced controllers
   { id: 'oxyc42',   name: 'OxyCycler C42',     variant: 'Dynamic O₂/CO₂/N₂',           type: 'controller', w: 11,    d: 10, h: 7,    weight: null, gases: ['O₂','CO₂','N₂'], part: 'C42',  cap: 'dynamic O₂/CO₂ cycling for paired experimental and control conditions', basePrice: 12000 },
-  { id: 'oxystr',   name: 'OxyStreamer',       variant: 'Perfusion gas pre-conditioner', type: 'controller', w: 7,    d: 9, h: 13,   weight: null, gases: ['O₂','CO₂','N₂'], part: 'OxyStreamer', cap: 'gas pre-conditioning for perfusion media', basePrice: 14000 },
+  { id: 'oxystr',   name: 'OxyStreamer',       variant: 'Perfusion gas pre-conditioner', type: 'controller', w: 7,    d: 9, h: 13,   weight: null, gases: ['O₂','CO₂','N₂'], part: 'SL2CO', cap: 'gas pre-conditioning for perfusion media', basePrice: 14000 },
   { id: 'gt41',     name: 'OxyCycler GT41',    variant: 'Gasotransmitter-capable',     type: 'controller', w: 11,    d: 10, h: 7,    weight: null, gases: ['O₂','CO₂','RH'], part: 'GT41', cap: 'gasotransmitter-capable control (O₂, CO₂, RH, with optional CO/NO)', basePrice: 18000 },
   // Placeholder for third-party
   { id: '3rd',      name: 'Third-party equipment', variant: 'placeholder',             type: 'thirdparty', w: 12,    d: 12, h: 12,   weight: null, gases: [],             part: '—', basePrice: 0 },
 ];
 
 const findComp = (id) => COMPONENTS.find(c => c.id === id);
+
+// Compact dimension formatter: 8.875 → "8.9", 14 → "14", 13 → "13"
+const formatDim = (n) => Number.isInteger(n) ? `${n}` : (+n.toFixed(1)).toString();
 
 /* ============================================================
    DESIGN INTENT — auto-generated paragraph from current layout
@@ -1478,7 +1491,7 @@ function Sidebar({ onPick }) {
 }
 
 function LibItem({ comp, onPick }) {
-  const dims = `${comp.w}″ × ${comp.d}″${comp.h ? ` × ${comp.h}″H` : ''}`;
+  const dims = `${formatDim(comp.w)} × ${formatDim(comp.d)} × ${formatDim(comp.h)}″`;
   const showPart = comp.part && comp.part !== '—';
   const img = PRODUCT_IMAGES[comp.id];
   return (
@@ -1638,7 +1651,7 @@ function CanvasArea({ benchW, benchD, placed, setPlaced, selectedId, setSelected
                 )}
               </div>
               <div className="placed-footer">
-                <span className="placed-dims">{comp.w}″ × {comp.d}″</span>
+                <span className="placed-dims">{formatDim(comp.w)} × {formatDim(comp.d)}″</span>
                 {comp.part && comp.part !== '—' && (
                   <span className="placed-part">{comp.part}</span>
                 )}

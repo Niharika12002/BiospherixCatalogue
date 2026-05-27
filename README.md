@@ -184,3 +184,87 @@ Add these images to the README here:
 ![Handwritten feedback notes from Nihar reviewing the prototype](assets/research/nihar-feedback-notes-01.jpg)
 
 ![Second round of prototype feedback notes showing naming and logo changes](assets/research/nihar-feedback-notes-02.jpg)
+
+---
+
+## Platform Rationale
+
+The project lives as a **browser-based React application** because Nihar’s problem happens in the space between engineering and client communication.
+
+Nihar already has professional tools for detailed design work: Fusion 360, SolidWorks, Blender, CNC workflows, and fabrication tools. Those tools are powerful, but they are not the right platform for the early conversation where a client is still deciding what system they need. At that stage, the design needs to stay flexible. If the platform is too technical or too final, it forces Nihar to spend time building something before the client has actually agreed on the direction.
+
+The tool needed to live somewhere lighter, faster, and easier to share.
+
+A web app was the right choice because Nihar can open it during a client call, screen-share it, make changes live, and use it without asking the client to download software or understand engineering tools. His clients are often researchers, lab teams, or scientists — not CAD users. The browser is the shared space between Nihar and the client.
+
+---
+
+## Why React?
+
+React was chosen because the tool depends on a changing interface: components are added, moved, edited, removed, and reflected in the layout and proposal view. React makes sense for this because the interface can update immediately as Nihar builds the system.
+
+The app needed to support:
+
+- A component library
+- A visual layout canvas
+- Editable system information
+- Changing categories
+- Client/project fields
+- A proposal-style output
+- Persistent user edits
+
+These are all state-based interactions. React allows the product library, canvas, and proposal information to stay connected instead of being separate static screens.
+
+---
+
+## Why Not a CAD Plugin?
+
+A CAD plugin would place the tool inside Nihar’s engineering workflow, but the problem happens before detailed engineering begins. Fusion 360 and SolidWorks are useful once the system direction is clear. They are not ideal for quick client alignment.
+
+A CAD-based tool would also exclude the client. The client does not need to rotate a 3D model or inspect engineering geometry. They need to understand the layout, footprint, component relationships, and general system logic.
+
+This project is not trying to replace CAD. It is trying to reduce the amount of unnecessary CAD work Nihar has to do before the client is aligned.
+
+---
+
+## Why Not Blender or 3D Rendering?
+
+Blender is useful for polished visuals, but it is too slow for fast revision. If a client says, “Can we add another chamber?” or “Can this fit in a different layout?”, Nihar should not have to rebuild a render just to answer that question.
+
+The React app lets him make those changes quickly in a simplified layout view. It sacrifices photorealism on purpose in order to prioritize speed, clarity, and live revision.
+
+---
+
+## Why Not a PDF or Static Catalog?
+
+A static PDF would be easy to send, but it would not solve the core problem. Nihar does not just need to show BioSpherix products. He needs to combine products into custom systems.
+
+A PDF cannot respond to the conversation in real time. It cannot let him drag components around, edit dimensions, add custom categories, or adjust the system while talking to a client.
+
+BioSpherix already has catalog material. This project is not another catalog. It is a planning tool.
+
+---
+
+## Why Not a Physical Kiosk or Installation?
+
+A kiosk would not fit Nihar’s workflow. His work happens across office conversations, client calls, design revisions, and sometimes travel. The tool needs to move with him and open wherever he is working.
+
+A browser-based tool is more flexible because it can be used on his laptop during a Zoom or FaceTime call, shared through a URL, and updated without needing a dedicated physical setup.
+
+---
+
+## Deployment Choice
+
+The project is hosted on **GitHub Pages** because it is simple, public, and easy to access. For this project, the priority was not building a complex backend or account system. The priority was shipping a working tool that Nihar could open and test immediately.
+
+GitHub Pages also fits the scale of the project. It keeps the tool lightweight, easy to update, and easy to submit as part of the final case study.
+
+---
+
+## Platform Conclusion
+
+The platform choice follows the person.
+
+Nihar needed a tool that was faster than Blender, less technical than CAD, more flexible than a PDF, and easier to access than a specialized installation. A React web app was the best fit because it lives exactly where the problem happens: during the conversation between Nihar and the client.
+
+The browser becomes the shared workspace where a client’s needs can turn into a visible system layout before Nihar invests time in detailed engineering work.

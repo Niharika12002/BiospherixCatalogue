@@ -72,11 +72,11 @@ The single-file architecture (React + Babel via CDN, no build step) is a deliber
 The following are constraints driven by what Nihar needs, not by what looks good in a demo. I will not compromise on them, including when AI proposes a faster or "smarter" alternative:
 
 - **No emoji.** Nihar's professional context is clinical and engineering. Emoji pull the entire artifact toward consumer-app territory and undermine the credibility of the tool the first time it's screen-shared with a research group.
-- **Real BioSpherix specifications.** Every component dimension, weight, gas spec, and material reference comes from official BioSpherix product PDFs. No invented numbers, no "rounded for cleanliness." Nihar would notice immediately.
+- **Verified BioSpherix specifications where available.** Component dimensions, weights, gas specs, and material references are pulled from BioSpherix product material where available. Pricing is treated as editable estimate data, not final internal quote data. If a value is uncertain, the tool should make that clear instead of pretending it is official.
 - **Floor plan to scale.** Visual size on the canvas equals real physical size. The whole point of the floor plan is footprint accuracy — what fits on a 60-inch bench, what doesn't. Visual cohesion lives in typography and spacing, not in sacrificing scale.
 - **Client-ready by default.** No "client mode" toggle, no presenter view. Every screen state has to be polished enough that Nihar can turn the laptop toward a client mid-conversation without feeling exposed.
 - **The tool has to belong to Nihar.** Editable library, persistent across sessions. If his customizations don't survive a reload, the tool is a fixed BioSpherix presentation, not Nihar's working library.
-- **Brand integrity.** BioSpherix is a real company with a real visual identity. The logo, color palette, and naming conventions are not approximations — they're the official 2024 brand assets. Anything less reads as a class project, not a tool.
+- **Brand integrity.** BioSpherix is a real company with a real visual identity. The logo, color palette, and naming conventions need to feel aligned with BioSpherix / Breeze Group rather than generic startup branding. Anything less reads as a class project, not a tool.
 
 ---
 

@@ -16,18 +16,20 @@
 
 <style>
 :root {
-  --navy:    #1B3A6B;
+  --navy:    #1B3A6B;       /* 11.27:1 on white — AAA */
   --navy-d:  #122749;
-  --orange:  #E8772E;
-  --orange-d:#C75F1E;
+  --orange:  #E8772E;       /* Brand — decorative only (borders, accents, checkbox bg) */
+  --orange-d:#C75F1E;       /* Brand hover — decorative only */
+  --orange-text:   #8E3C0F; /* AAA-compliant orange for text (7.49:1 on white) */
+  --orange-text-d: #6B2F08; /* Hover state for orange text/button */
   --bg:      #F4F6FA;
   --surface: #FFFFFF;
-  --border:  #E2EAF4;
-  --border-strong: #C7D3E3;
+  --border:  #E2EAF4;       /* Decorative dividers */
+  --border-strong: #6B7B91; /* Input/checkbox/UI borders — 4.31:1 (passes WCAG 1.4.11) */
   --grid:    #EEF2F7;
-  --text:    #1A2332;
-  --text-2:  #5A6B82;
-  --text-3:  #8B9AAE;
+  --text:    #1A2332;       /* 15.78:1 on white — AAA */
+  --text-2:  #2E3A52;       /* 11.39:1 on white — AAA (was #5A6B82) */
+  --text-3:  #3D4C66;       /* 8.66:1 on white, 8.01:1 on bg — AAA (was #8B9AAE) */
   --chamber-tint: #EFF4FB;
   --controller-tint: #FFF4EC;
   --third-tint: #F4F0EA;
@@ -115,11 +117,11 @@ input, textarea { font-family: inherit; }
   letter-spacing: 0.01em;
 }
 .btn-primary {
-  background: var(--orange);
+  background: var(--orange-text);
   color: #fff;
-  border-color: var(--orange);
+  border-color: var(--orange-text);
 }
-.btn-primary:hover { background: var(--orange-d); border-color: var(--orange-d); }
+.btn-primary:hover { background: var(--orange-text-d); border-color: var(--orange-text-d); }
 .btn-ghost {
   background: transparent;
   color: #fff;
@@ -329,9 +331,9 @@ input, textarea { font-family: inherit; }
   position: absolute;
   top: 6px;
   right: 8px;
-  font-size: 9.5px;
+  font-size: 11px;
   font-family: 'IBM Plex Mono', monospace;
-  color: var(--orange);
+  color: var(--orange-text);
   font-weight: 600;
   letter-spacing: 0.04em;
 }
@@ -364,8 +366,14 @@ input, textarea { font-family: inherit; }
   padding: 24px;
   overflow: auto;
   display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 0;
+}
+
+.canvas-wrap {
+  display: flex;
   flex-direction: column;
-  align-items: flex-start;
 }
 
 .canvas-frame {
@@ -430,9 +438,9 @@ input, textarea { font-family: inherit; }
   z-index: 10;
 }
 .placed.selected {
-  border-color: var(--orange);
+  border-color: var(--orange-text);
   border-width: 2px;
-  box-shadow: 0 0 0 2px rgba(232,119,46,0.18);
+  box-shadow: 0 0 0 2px rgba(142,60,15,0.18);
 }
 
 .placed.t-chamber { background: var(--chamber-tint); }
@@ -452,7 +460,7 @@ input, textarea { font-family: inherit; }
 }
 
 .placed-dims {
-  font-size: 9px;
+  font-size: 10px;
   font-family: 'IBM Plex Mono', monospace;
   color: var(--text-2);
   margin-top: 2px;
@@ -463,9 +471,9 @@ input, textarea { font-family: inherit; }
   position: absolute;
   bottom: 3px;
   right: 5px;
-  font-size: 8.5px;
+  font-size: 10px;
   font-family: 'IBM Plex Mono', monospace;
-  color: var(--orange);
+  color: var(--orange-text);
   font-weight: 600;
 }
 
@@ -476,7 +484,7 @@ input, textarea { font-family: inherit; }
   width: 18px;
   height: 18px;
   border-radius: 50%;
-  background: var(--orange);
+  background: var(--orange-text);
   color: #fff;
   border: none;
   font-size: 12px;
@@ -615,9 +623,9 @@ input, textarea { font-family: inherit; }
   border-color: var(--border-strong);
 }
 .pricing-item.selected {
-  border-color: var(--orange);
+  border-color: var(--orange-text);
   background: #FFFFFF;
-  box-shadow: 0 0 0 1px var(--orange);
+  box-shadow: 0 0 0 1px var(--orange-text);
 }
 
 .pricing-item-head {
@@ -642,8 +650,8 @@ input, textarea { font-family: inherit; }
 }
 .pricing-item-part {
   font-family: 'IBM Plex Mono', monospace;
-  font-size: 10.5px;
-  color: var(--orange);
+  font-size: 11px;
+  color: var(--orange-text);
   font-weight: 600;
   letter-spacing: 0.02em;
 }
@@ -680,8 +688,8 @@ input, textarea { font-family: inherit; }
   margin: 0;
 }
 .pricing-item-custom input[type="checkbox"]:checked {
-  background: var(--orange);
-  border-color: var(--orange);
+  background: var(--orange-text);
+  border-color: var(--orange-text);
 }
 .pricing-item-custom input[type="checkbox"]:checked::after {
   content: '';
@@ -701,7 +709,7 @@ input, textarea { font-family: inherit; }
   font-family: 'IBM Plex Mono', monospace;
   font-size: 11px;
   font-weight: 600;
-  color: var(--orange);
+  color: var(--orange-text);
 }
 
 .pricing-item-slider {
@@ -726,19 +734,19 @@ input, textarea { font-family: inherit; }
   width: 14px;
   height: 14px;
   border-radius: 50%;
-  background: var(--orange);
+  background: var(--orange-text);
   cursor: pointer;
   border: 2px solid white;
-  box-shadow: 0 0 0 1px var(--orange);
+  box-shadow: 0 0 0 1px var(--orange-text);
 }
 .pricing-item-slider input[type="range"]::-moz-range-thumb {
   width: 14px;
   height: 14px;
   border-radius: 50%;
-  background: var(--orange);
+  background: var(--orange-text);
   cursor: pointer;
   border: 2px solid white;
-  box-shadow: 0 0 0 1px var(--orange);
+  box-shadow: 0 0 0 1px var(--orange-text);
 }
 
 .pricing-item-num {
@@ -779,7 +787,7 @@ input, textarea { font-family: inherit; }
 .pricing-item-markup .mono {
   font-family: 'IBM Plex Mono', monospace;
   font-weight: 500;
-  color: var(--orange);
+  color: var(--orange-text);
 }
 
 .pricing-item-total {
@@ -837,7 +845,7 @@ input, textarea { font-family: inherit; }
 }
 .pricing-row-sub .mono {
   font-family: 'IBM Plex Mono', monospace;
-  color: var(--orange);
+  color: var(--orange-text);
 }
 
 .pricing-discount {
@@ -929,7 +937,7 @@ input, textarea { font-family: inherit; }
 
 .parts-num {
   font-family: 'IBM Plex Mono', monospace;
-  color: var(--orange);
+  color: var(--orange-text);
   font-weight: 600;
   font-size: 11px;
 }
@@ -1559,13 +1567,14 @@ function CanvasArea({ benchW, benchD, placed, setPlaced, selectedId, setSelected
 
   return (
     <div className="canvas-area">
-      <div
-        ref={canvasRef}
-        className="canvas-frame"
-        style={{ width: canvasW, height: canvasH }}
-        onMouseMove={onCanvasMouseMove}
-        onClick={clearSelection}
-      >
+      <div className="canvas-wrap" style={{ width: canvasW }}>
+        <div
+          ref={canvasRef}
+          className="canvas-frame"
+          style={{ width: canvasW, height: canvasH }}
+          onMouseMove={onCanvasMouseMove}
+          onClick={clearSelection}
+        >
         <svg className="canvas-grid" width={canvasW} height={canvasH}>
           {gridLines}
         </svg>
@@ -1618,6 +1627,7 @@ function CanvasArea({ benchW, benchD, placed, setPlaced, selectedId, setSelected
       <div className="canvas-caption">
         <span>Bench top-down view</span>
         <span>{benchW}″ × {benchD}″ · 1 div = 1 in</span>
+      </div>
       </div>
     </div>
   );

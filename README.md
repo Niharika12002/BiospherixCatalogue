@@ -1,7 +1,9 @@
 # Design Your Lab — A Layout Planner for BioSpherix
 
 **AI 201 · Project 3: Persons Required**
+
 **Built for Nihar · Mechanical Engineer, BioSpherix**
+
 **Live URL:** https://niharika12002.github.io/BiospherixCatalogue/
 
 ---

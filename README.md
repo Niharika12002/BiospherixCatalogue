@@ -686,3 +686,51 @@ AI was used throughout the process, especially for organizing thoughts, writing 
 The biggest example is the shift from a BioSpherix catalog to a layout planner. That was not AI’s default direction. It came from listening to Nihar and realizing that the real problem was spatial planning and client alignment. I also documented the moments where I rejected placeholder visuals, overcomplicated platform ideas, fixed component libraries, and generic language.
 
 The disclosure is honest because it does not pretend AI was absent, and it does not pretend AI made the design decisions alone. The project came from a collaboration between my research, Nihar’s feedback, and AI-supported production.
+
+---
+
+## Post-Mortem
+
+This project taught me that designing for a real person is much harder, but also much clearer, than designing for a hypothetical user.
+
+When the user is hypothetical, it is easy to make broad assumptions and defend them with nice language. When the person has a name, a job, a schedule, and real feedback, the project becomes more accountable. Nihar’s workflow gave the project limits. His feedback made the direction more specific. His needs forced me to make decisions that were not just about what looked good, but about what would actually help him.
+
+### What Worked
+
+The strongest part of this project was the research relationship. Because I had direct access to Nihar, I was able to ask follow-up questions, show him rough versions, and get honest feedback. That made the project stronger than if I had only designed from assumptions.
+
+The biggest success was the shift from a BioSpherix catalog to a layout planner. At the beginning, it would have been easy to make a product browsing tool because BioSpherix has many chambers, controllers, and system parts. But the interviews showed that the real pain point was not finding products. The real pain point was arranging them into a system layout and explaining that layout to a client before spending time in CAD or Blender.
+
+The platform choice also worked. A React web app made sense because Nihar needed something lightweight, fast, and screen-shareable. The tool did not need to live inside Fusion 360 or SolidWorks because the problem happens before detailed engineering. It needed to live in the browser, where Nihar and a client could look at the same thing during a conversation.
+
+The prototype testing also worked because Nihar gave specific feedback. He did not just say the app was good or bad. He asked for component editing, adding and subtracting parts, new categories, better naming, and real branding. That feedback gave the project a clearer next step.
+
+### What Failed
+
+The first failure was that the project direction started too broad. I spent time thinking about a product catalog before fully understanding that Nihar needed a layout planning tool. That early direction was not completely wrong, but it was too surface-level. It focused on BioSpherix products instead of Nihar’s actual workflow.
+
+Another failure was that some features became clearer only after testing. The editable component library should have been treated as a core feature from the beginning, not as something added after feedback. Nihar’s work is custom, so a fixed library was never going to be enough.
+
+The project also had technical and documentation friction. Getting the README structure right, organizing image paths, and making sure the research evidence displayed correctly took more time than expected. Small details like file names, capitalization, and Markdown formatting mattered more than I expected because the README is part of the final product presentation.
+
+The biggest limitation is that the tool was tested with Nihar in a prototype review context, not yet in a full real client meeting. The project verifies that the direction is useful to him, but it does not fully prove long-term use in his professional workflow yet.
+
+### What I Would Do Differently
+
+If I did this project again, I would test with Nihar earlier, even with a rougher prototype. I waited until the app had a more complete interface before showing it, but earlier testing would have revealed the need for editable components and categories sooner.
+
+I would also define the minimum viable product more tightly. The core tool only needed a few things to prove the concept: a component library, a scaled layout canvas, editable components, and a client-ready summary. I could have focused on those earlier instead of considering broader catalog or proposal features.
+
+I would collect and organize research evidence from the beginning. Screenshots, interview notes, quotes, and feedback photos became important later, but I should have treated them as part of the design process from day one.
+
+I would also build the component editing system earlier. Nihar’s feedback showed that ownership of the library is what makes the tool useful beyond a demo. If the tool belongs to him, he needs to be able to change it.
+
+### What I Learned
+
+The biggest lesson is that a real person makes design decisions less abstract. I could not defend a choice by saying it looked clean or seemed useful. I had to ask whether it helped Nihar do his work.
+
+I also learned that AI is most useful when I have a strong design argument before using it. When I did not have a clear direction, AI produced broad and generic ideas. Once I had Nihar’s workflow and feedback, AI became much more useful because I could direct it, reject it, and revise it based on something real.
+
+Designing for a hypothetical user often rewards polish. Designing for a real person rewards fit. The project did not become stronger because it became more complicated. It became stronger because it became more specific.
+
+The final product is not a finished commercial tool, but it is a meaningful step toward one. It identifies a real gap in Nihar’s workflow and builds a working prototype around that gap. More importantly, it shows a design cycle shaped by listening, testing, resisting generic ideas, and revising the work based on the person it was made for.
